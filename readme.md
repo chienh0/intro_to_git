@@ -10,10 +10,9 @@ This guide provides an overview of Git, a version control system, and how it can
   - [Version Control with Git](#version-control-with-git)
     - [Initializing a Git Repository](#initializing-a-git-repository)
     - [Cloning a Repository](#cloning-a-repository)
-    - [Committing Changes](#committing-changes)
+    - [Staging and Committing Changes](#staging-and-committing-changes)
     - [Branching and Merging](#branching-and-merging)
   - [Collaboration with GitHub](#collaboration-with-github)
-    - [Creating a Repository](#creating-a-repository)
     - [Forking a Repository](#forking-a-repository)
     - [Pull Requests](#pull-requests)
     - [Git Workflow](#git-workflow)
@@ -29,7 +28,7 @@ Git is a version control system enables multiple team members to collaborate on 
 - Coding collaboration
 
 ### What is GitHub?
-GitHub is a cloud platform that not only stores code but also for collaboration. 
+GitHub is a cloud platform for storing code and facilitating collaboration.
 
 <p float='left'>
   <img src='/images/git_workflow.png' width='650' />
@@ -46,8 +45,7 @@ Source: [Medium](https://medium.com/frontend-canteen/you-can-master-git-git-comm
 
 
 ### Create a local Git Repository
-To begin, open up a terminal (Git Bash) and move to where you want to place the project on your local machine using the cd (change directory) command
-
+To begin, open up a terminal (Git Bash) and navigate to where you want to place the project on your local machine using the cd (change directory) command: 
 ```bash
 cd desktop                    # cd command changes directory
 mkdir github_projects         # mkdir command creates directories
@@ -62,14 +60,13 @@ git clone <repository_url>
 ```
 Replace <repository_url> with the URL of the repository you want to clone.
 
-### Staging Changes
+### Staging and Committing Changes
 Git allows you to stage changes before you commit them. This is useful for grouping related changes into a single commit:
 
 ```bash
 git add -all                     # Add all modified files for commit
 ```
 
-### Committing Changes
 To save your changes in Git, you need to commit them:
 
 ```bash
@@ -112,22 +109,17 @@ Pull requests enable collaboration and contribution to a repository. Here's a ty
 5) Discuss and review the changes with other team members.
 Once approved, the changes can be merged into the original repository.
 
-### Git Workflow
-
-To ensure a smooth and efficient collaborative development process, it's important to follow best practices when working with Git. Here are some suggested guidelines:
-
-- **Branching Strategy**: Adopt a branching strategy that suits your project and team. Common strategies include the Gitflow workflow, feature branches, or trunk-based development. Choose a strategy that promotes isolation, parallel development, and easy collaboration.
-
-- **Commit Message Conventions**: Write clear and descriptive commit messages to provide meaningful context about the changes made. Consider using a consistent format, such as the [Conventional Commits](https://www.conventionalcommits.org/) format, which helps standardize commit messages and facilitates automated changelog generation.
-
-- **Conflict Resolution**: When multiple team members are working on the same codebase, conflicts may arise during merges or pull requests. Encourage regular communication and coordination to minimize conflicts. In case of conflicts, use Git's built-in merge tools or popular third-party tools like KDiff3 or Beyond Compare to resolve conflicts efficiently.
-
-- **Code Reviews**: Emphasize the importance of code reviews as part of the development process. Encourage team members to review each other's code, provide constructive feedback, and ensure adherence to coding standards and best practices. Code reviews help improve code quality, identify potential issues, and promote knowledge sharing among team members.
-
-Remember, these are general best practices, and you can tailor them to your specific project and team requirements.
-
 ## Best Practices 
+### Naming Git Repositories
+When naming your repositories, it's important to keep the names consistent, descriptive, and meaningful. To maintain uniformity and improve readability, follow these guidelines:
+
+Use lowercase letters for all words in the repository name.
+Separate words with underscores (_) to make the name easier to read.
+The name should briefly reflect the repository's purpose or the project it contains. Avoid vague or overly generic names.
+
 ### Create a README file
 To make it easier for people to understand and navigate your work, we recommend that you create a README file for every repository. You can add a README file to a repository to communicate important information about your project. 
 
 Source: https://docs.github.com/en/repositories/creating-and-managing-repositories/best-practices-for-repositories
+
+## Terminal Commands (ls, cd, mkdir, tab for autocompletion)
